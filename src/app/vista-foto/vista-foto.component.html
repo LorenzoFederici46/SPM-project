@@ -1,0 +1,30 @@
+<br>
+<br>
+<div class="container">
+<div *ngFor="let post of posts">
+      <mat-card class="example-card">
+        <mat-card-header>
+          <div mat-card-avatar>
+            <img [src]="post.avatar" alt="Avatar" class="example-header-image">
+          </div>
+          <mat-card-title>{{post.nome}}</mat-card-title>
+          <mat-card-subtitle> Caricata da {{post.nome_utente}}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <div class="content">
+            <div class="row">
+              <div class="col-lg-6 col-12 col-md-8">
+                <img class="img-fluid" [src]="post.value">   
+              </div>
+              <div class="col-lg-6 col-12 col-md-4">
+                <textarea matInput id="floatingPassword" class="form-control">
+              {{post.descrizione}}                 
+            </textarea>
+              </div>
+            </div> 
+          </div>
+        </mat-card-content>
+      </mat-card>
+      <br><br> 
+    </div>
+  </div>

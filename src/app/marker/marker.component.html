@@ -1,0 +1,11 @@
+<h2 class="navbar-brand title">Inserisci la posizione</h2>
+<br>
+  <div class="map-container" leaflet [leafletOptions]="options" (leafletMapReady)="onMapReady($event)"
+    (leafletClick)="mapClicked($event)">
+  </div>
+  <br>
+  <div>
+    <button mat-flat-button color="primary" class="btn" (click)="exit()">
+      Conferma
+    </button>
+  </div>

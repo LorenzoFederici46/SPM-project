@@ -1,0 +1,32 @@
+.d-flex{
+    margin-top: 30px;
+}
+
+.sidenav-container {
+  background-image: url('src/assets/rosaSfondo.jpg'); 
+  background-size: cover; 
+  height: 100%;
+  }
+  
+  mat-sidenav{
+    background-color:rosybrown;
+  }
+
+  .sidenav {
+    width: 200px;
+  }
+  
+  .sidenav .mat-toolbar {
+    background: inherit;
+  }
+  
+  .mat-toolbar.mat-primary {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
+  
+  mat-toolbar {
+    background-color:rosybrown;
+    width: 100vw;
+  }

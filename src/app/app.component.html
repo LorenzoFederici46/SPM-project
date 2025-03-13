@@ -1,0 +1,75 @@
+<mat-sidenav-container class="sidenav-container">
+    <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+        [mode]="(isHandset$ | async) ? 'over' : 'side'">
+        <mat-toolbar>
+            <button mat-icon-button class="example-icon" matTooltip="Clicca per tornare alla home"
+                aria-label="Example icon-button with menu icon" (click)="backHome()">
+                <mat-icon>home</mat-icon>
+            </button>
+        </mat-toolbar>
+        <mat-nav-list *ngIf="isAuthenticated; else notAuthenticatedList">
+            <mat-list-item>
+                <button mat-icon-button class="example" aria-label="Example icon-button with share icon"
+                    (click)="openMap()">
+                    <mat-icon>map</mat-icon>
+                    <a>Mappa</a>
+                </button>
+            </mat-list-item>
+            <mat-list-item>
+                <button mat-icon-button class="example"
+                    aria-label="Example icon-button with heart icon" (click)="openUploadForm()">
+                    <mat-icon>add_a_photo</mat-icon>
+                    <a>Upload</a>
+                </button>
+            </mat-list-item>
+            <mat-list-item>
+                <button mat-icon-button class="example"
+                    aria-label="Example icon-button with share icon" (click)="viewUserProfile()">
+                    <mat-icon>supervised_user_circle</mat-icon>
+                    <a>Profilo</a>
+                </button>
+            </mat-list-item>
+            <mat-list-item>
+                <button mat-icon-button class="example"
+                    aria-label="Example icon-button with share icon" (click)="logOut()">
+                    <mat-icon>exit_to_app</mat-icon>
+                    <a>Logout</a>
+                </button>
+            </mat-list-item>
+        </mat-nav-list>
+        <ng-template #notAuthenticatedList>
+            <mat-nav-list>
+            <mat-list-item>
+                <button mat-icon-button class="example"
+                    aria-label="Example icon-button with share icon" (click)="openLoginForm()">
+                    <mat-icon>account_circle</mat-icon>
+                    <a>Login</a>
+                </button>
+            </mat-list-item>
+            <mat-list-item>
+                <button mat-icon-button class="example"
+                    aria-label="Example icon-button with share icon" (click)="openRegisterForm()">
+                    <mat-icon>account_box</mat-icon>
+                    <a>Registrati</a>
+                </button>
+            </mat-list-item>
+            <mat-list-item>
+                <button mat-icon-button class="example" aria-label="Example icon-button with share icon"
+                    (click)="openMap()">
+                    <mat-icon>map</mat-icon>
+                    <a>Mappa</a>
+                </button>
+            </mat-list-item>
+        </mat-nav-list>
+        </ng-template>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <mat-toolbar>
+            <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()">
+                <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+            </button>
+            <span>Porto Recanati Portal</span>
+        </mat-toolbar>
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>

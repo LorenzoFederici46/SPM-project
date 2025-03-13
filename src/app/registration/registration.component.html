@@ -1,0 +1,32 @@
+<br>
+<h1></h1>
+<div class="text-center card container col-md-3">
+    <div class="mt-5 mb-5">
+        <img class="mb-4" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQGinog-JNh9dqqIKN2i4zZf18IC0-yfAtj9jKICevpfh1dRCfvpZLoXlfLtvAXvy6lqQ&usqp=CAU" alt="" width="72"
+            height="70">
+        <h1 class="h3 mb-3 fw-normal">Register</h1>
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="inputNome" placeholder="name@example.com"  [(ngModel)]="nome">
+            <label for="floatingInput">Nome</label>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="inputCognome" placeholder="name@example.com"  [(ngModel)]="cognome">
+            <label for="floatingInput">Cognome</label>
+        </div>
+
+        <div class="form-floating mb-3">
+            <input type="file" class="form-control" id="inputFoto" placeholder="name@example.com"  (change)="uploadAvatar($event)" accept="image/*" >
+            <label for="floatingInput">Seleziona la foto profilo</label>
+        </div>
+
+        <div class="form-floating">
+            <input type="text" class="form-control" id="inputEmail" placeholder="name@example.com"  [(ngModel)]="email">
+            <label for="floatingInput">Email</label>
+        </div>
+        <div class="form-floating mt-3 mb-3">
+            <input type="password" class="form-control" id="inputPassword" placeholder="Password"  [(ngModel)]="password">
+            <label for="floatingPassword">Password</label>
+        </div>
+        <button class="w-100 btn btn-lg btn-primary" id="btn" type="submit" (click)="onRegisterSubmit()">Sign in</button>
+    </div>
+

@@ -1,0 +1,47 @@
+<h1></h1>
+    <div class="container">
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-12">
+            <h1 class="h3 mb-3 fw-normal">Inserisci le tue foto!</h1>
+            <div class="form-floating">
+                <button mat-raised-button color="primary" (click)="openDialog()">Inserisci la posizione</button>
+            </div>
+            <div class="form-floating mt-1">
+                <input type="file"
+                class="form-control" 
+                id="inputFoto"
+                accept="image/*"
+                (change)="uploadImage($event)"
+                >
+                <div class="form-floating mt-2">
+                    <input type="text"
+                    class="form-control" 
+                    id="inputNomeLuogo"
+                    [(ngModel)]="nome">
+                    <label for="floatingInput">Inserisci il nome del luogo</label>
+                </div>
+                <div class="form-floating mt-3">
+                    <input type="number"
+                    class="form-control" 
+                    id="inputAnno"
+                    [(ngModel)]="anno">
+                    <label for="floatingInput">Inserisci l'anno della foto</label>
+                </div>
+                <div class="form-floating mt-4">
+                  <textarea matInput 
+                  class="form-control"
+                  id="inputDescrizione"
+                  [(ngModel)]="descrizione">
+                  </textarea>
+                  <label for="floatingInput">Inserisci una breve descrizione</label>
+              </div>
+                <button class="w-100 btn btn-lg btn-primary" type="submit" id="btn" (click)="upload()">Conferma</button>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6 col-12">
+            <h3></h3>
+            <img  class="img" *ngIf="imageData" [src]="imageData" alt="Anteprima immagine" />
+          </div>
+        </div>
+      </div>
+

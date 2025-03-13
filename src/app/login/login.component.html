@@ -1,0 +1,24 @@
+<br>
+<h1></h1>
+<div class="text-center card container col-md-3">
+    <div class="mt-5 mb-5">
+
+        <img class="mb-4" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQGinog-JNh9dqqIKN2i4zZf18IC0-yfAtj9jKICevpfh1dRCfvpZLoXlfLtvAXvy6lqQ&usqp=CAU" alt="" width="72"
+            height="70">
+        <h1 class="h3 mb-3 fw-normal">Log In</h1>
+        <div class="form-floating">
+            <input 
+            type="text" class="form-control" id="inputEmail" 
+            placeholder="name@example.com" 
+            [(ngModel)]="email">
+            <label for="floatingInput">Email address</label>
+        </div>
+        <div class="form-floating mt-1">
+            <input type="password" class="form-control" id="inputPassword" 
+            placeholder="Password" 
+            [(ngModel)]="password">
+            <label for="floatingPassword">Password</label>
+        </div>
+        <button class="w-100 btn btn-lg btn-primary" id="btn" (click)="confirmTheLogin()">Sign in</button>
+        </div>
+</div>

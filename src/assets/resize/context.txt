@@ -1,0 +1,1 @@
+It is used for storing the media file uploaded by the user

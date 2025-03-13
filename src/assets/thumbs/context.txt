@@ -1,0 +1,1 @@
+It is used for storing the thumbnail produced from the photos

@@ -1,0 +1,24 @@
+
+<div class="container">
+
+<h2 class="navbar-brand title">Foto relative all'anno</h2>
+<h2 class="navbar-brand title">{{anno}}</h2>
+<br>
+<div class="slidecontainer">
+  <input type="range" [min]="minValue" [max]="maxValue" [(ngModel)]="sliderValue" class="slider" id="myRange"
+    (change)="onSliderChange($event)">
+  <p>Seleziona l'anno per visualizzare le foto: {{ sliderValue }}</p>
+</div>
+<br>
+<div class="map-container" leaflet [leafletOptions]="options" (leafletMapReady)="onMapReady($event)"
+  (leafletClick)="mapClicked($event)">
+</div>
+<br>
+<br>
+<div class="timeline">
+  <button mat-raised-button class="btn-tm" color="primary" *ngFor="let anno of lista"
+    (click)="prova(anno)">{{anno.anno}}</button>
+</div>
+<br>
+<br>
+</div>

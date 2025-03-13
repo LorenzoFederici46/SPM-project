@@ -1,0 +1,13 @@
+.example-header-image {
+    width: 150px;
+    height: 150px; 
+    border-radius: 50%; 
+  }
+
+  .btn{
+    width: 100%;
+  }
+
+  mat-form-field{
+    width: 100%;
+  }
